@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>You're Invited!</title>
+  <link rel="stylesheet" href="result.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="sparkles" id="sparkles"></div>
+  
+  <div class="result-container">
+    <h1>Ще дойдете ли с нас на бала?</h1>
+
+    <div class="button-container">
+      <button id="trueBtn" onclick="sayYes()">true <span class="emoji">✨</span></button>
+      <button id="falseBtn">false <span class="emoji">🙁</span></button>
+    </div>
+    
+    <div id="message"></div>
+    
+    <div class="invite-details">
+      <p><span class="emoji">🎉</span> Дата: <strong>Май 25, 2025</strong></p>
+      <p><span class="emoji">📍</span> Място: <strong>Vlissingen High School Auditorium</strong></p>
+      <p><span class="emoji">🕖</span> Час: <strong>7:00 PM - 11:30 PM</strong></p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="result.js"></script>
+</body>
+</html>

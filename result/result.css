@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #2b133c, #5a189a, #3a0ca3, #4361ee);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  color: #fff;
+  text-align: center;
+  padding: 40px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  overflow: hidden;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.result-container {
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 700px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.result-container::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  z-index: -1;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #ffcc70;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(255, 204, 112, 0.5);
+  font-weight: 700;
+}
+
+.invite-details {
+  margin-top: 30px;
+  font-size: 1.2rem;
+  color: #e0d7f4;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 15px;
+  border-left: 4px solid #ffcc70;
+}
+
+.invite-details p {
+  margin: 10px 0;
+}
+
+.invite-details strong {
+  color: #ffcc70;
+  font-weight: 600;
+}
+
+#message {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #ffd700;
+  min-height: 60px;
+  padding: 10px;
+}
+
+button {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  margin: 15px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#trueBtn {
+  background: linear-gradient(45deg, #6a00f4, #8a2be2);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+#trueBtn::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#trueBtn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 7px 20px rgba(106, 0, 244, 0.4);
+}
+
+#trueBtn:hover::after {
+  opacity: 1;
+}
+
+#falseBtn {
+  background: linear-gradient(45deg, #ccc, #eee);
+  color: #333;
+  position: relative;
+  z-index: 100000;
+}
+
+#falseBtn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.2);
+}
+
+.emoji {
+  font-size: 1.5em;
+  margin: 0 5px;
+  display: inline-block;
+}
+
+.sparkles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.sparkle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 10px 2px rgba(255, 204, 112, 0.8);
+  animation: sparkle-float 3s ease-in-out infinite;
+}
+.button-container {
+  position: relative;
+  min-height: 100px;
+  margin: 20px 0;
+  width: 100%;
+}
+@keyframes sparkle-float {
+  0%, 100% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+  }
+  50% {
+      transform: translateY(-20px) scale(1.2);
+      opacity: 0.7;
+  }
+}

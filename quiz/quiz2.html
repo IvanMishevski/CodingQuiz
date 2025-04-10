@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Question 2</title>
+  <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+  <!-- Subtle code pattern background -->
+  <div class="code-pattern"></div>
+  
+  <!-- Floating code snippets -->
+  <div class="floating-code">public class Program { static void Main() { }</div>
+  <div class="floating-code">Console.WriteLine("Hello World!");</div>
+  <div class="floating-code">int[] numbers = new int[10];</div>
+  <div class="floating-code">foreach(var item in collection) { }</div>
+  
+  <div class="quiz-container">
+    <div class="question-number">Question 2/3</div>
+    
+    <div class="progress-bar">
+      <div class="progress" id="progress"></div>
+    </div>
+    
+    <h2>Complete the line:</h2>
+    <p><span class="highlight">_______</span>("Hello, World!");</p>
+    
+    <input type="text" id="answer" placeholder="Type your answer here...">
+    <button onclick="next('q2')">Next</button>
+  </div>
+  
+  <script src="script.js"></script>
+  <script>
+    window.addEventListener('load', function() {
+      document.getElementById('progress').style.width = '66%';
+      document.getElementById('answer').focus();
+    });
+  </script>
+</body>
+</html>

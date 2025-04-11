@@ -10,9 +10,9 @@ function next(question) {
     correct = true;
     sessionStorage.setItem('q2', 'Console.WriteLine');
     window.location.href = 'quiz3.html';
-  } else if (question === 'q3' && answer === 'static void') {
+  } else if (question === 'q3' && answer === 'finally') {
     correct = true;
-    sessionStorage.setItem('q3', 'static void');
+    sessionStorage.setItem('q3', 'finally');
     sessionStorage.setItem('quizPassed', 'true');
     
     // Show success message
@@ -28,7 +28,7 @@ function next(question) {
     // Delay before redirecting
     setTimeout(function() {
       window.location.href = '../result/result.html';
-    }, 5000); // 3 second delay
+    }, 5000); // 5 second delay
   }
 
   if (!correct) {

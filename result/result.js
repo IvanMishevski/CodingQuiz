@@ -43,7 +43,7 @@ function launchFullScreenConfetti() {
 
 // On clicking 'true'
 function sayYes() {
-  document.getElementById('message').innerHTML = "<span class='emoji'>🎉</span>Супер!Няма връщане назад,да знаете!Ще ви чакаме!'>👑</span>";
+  document.getElementById('message').innerHTML = "<span class='emoji'>🎉</span>Супер!Няма връщане назад,да знаете!Ще ви чакаме!>👑</span>";
   launchFullScreenConfetti();
   
   // Add more confetti after a delay

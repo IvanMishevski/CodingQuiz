@@ -6,13 +6,11 @@ body {
   animation: gradient 15s ease infinite;
   color: #fff;
   text-align: center;
-  padding: 40px;
+  padding: 2.5rem;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-y: hidden;
-  overflow-x: hidden;
   overflow: hidden;
 }
 
@@ -26,10 +24,11 @@ body {
   z-index: 1;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 40px;
-  max-width: 700px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border-radius: 1.25rem;
+  padding: 2.5rem;
+  width: 90%;
+  max-width: 43.75rem; /* 700px */
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.2);
   position: relative;
   overflow: hidden;
@@ -47,25 +46,26 @@ body {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: clamp(1.75rem, 5vw, 3rem);
   color: #ffcc70;
-  margin-bottom: 20px;
-  text-shadow: 0 0 10px rgba(255, 204, 112, 0.5);
+  margin-bottom: 1.25rem;
+  text-shadow: 0 0 0.625rem rgba(255, 204, 112, 0.5);
   font-weight: 700;
+  line-height: 1.2;
 }
 
 .invite-details {
-  margin-top: 30px;
-  font-size: 1.2rem;
+  margin-top: 1.875rem;
+  font-size: clamp(0.875rem, 3vw, 1.2rem);
   color: #e0d7f4;
   background: rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  border-radius: 15px;
-  border-left: 4px solid #ffcc70;
+  padding: 1.25rem;
+  border-radius: 0.9375rem;
+  border-left: 0.25rem solid #ffcc70;
 }
 
 .invite-details p {
-  margin: 10px 0;
+  margin: 0.625rem 0;
 }
 
 .invite-details strong {
@@ -74,23 +74,23 @@ h1 {
 }
 
 #message {
-  margin-top: 20px;
-  font-size: 1.5rem;
+  margin-top: 1.25rem;
+  font-size: clamp(1rem, 4vw, 1.5rem);
   color: #ffd700;
-  min-height: 60px;
-  padding: 10px;
+  min-height: 3.75rem;
+  padding: 0.625rem;
 }
 
 button {
-  padding: 12px 30px;
-  font-size: 1.1rem;
-  margin: 15px;
+  padding: 0.75rem 1.875rem;
+  font-size: clamp(0.875rem, 2.5vw, 1.1rem);
+  margin: 0.9375rem;
   border: none;
-  border-radius: 50px;
+  border-radius: 3.125rem;
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: 600;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.2);
 }
 
 #trueBtn {
@@ -113,8 +113,8 @@ button {
 }
 
 #trueBtn:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 7px 20px rgba(106, 0, 244, 0.4);
+  transform: translateY(-0.3125rem);
+  box-shadow: 0 0.4375rem 1.25rem rgba(106, 0, 244, 0.4);
 }
 
 #trueBtn:hover::after {
@@ -129,13 +129,13 @@ button {
 }
 
 #falseBtn:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.3125rem);
+  box-shadow: 0 0.4375rem 1.25rem rgba(0, 0, 0, 0.2);
 }
 
 .emoji {
   font-size: 1.5em;
-  margin: 0 5px;
+  margin: 0 0.3125rem;
   display: inline-block;
 }
 
@@ -151,78 +151,71 @@ button {
 
 .sparkle {
   position: absolute;
-  width: 10px;
-  height: 10px;
+  width: 0.625rem;
+  height: 0.625rem;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 0 10px 2px rgba(255, 204, 112, 0.8);
+  box-shadow: 0 0 0.625rem 0.125rem rgba(255, 204, 112, 0.8);
   animation: sparkle-float 3s ease-in-out infinite;
 }
+
 .button-container {
   position: relative;
-  min-height: 100px;
-  margin: 20px 0;
+  min-height: 6.25rem;
+  margin: 1.25rem 0;
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
+
 @keyframes sparkle-float {
   0%, 100% {
       transform: translateY(0) scale(1);
       opacity: 1;
   }
   50% {
-      transform: translateY(-20px) scale(1.2);
+      transform: translateY(-1.25rem) scale(1.2);
       opacity: 0.7;
   }
 }
+
 /* Mobile devices (portrait) */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 30em) { /* 480px */
   body {
-    padding: 20px 10px;
+    padding: 1.25rem 0.625rem;
   }
   
   .result-container {
-    padding: 25px 15px;
+    padding: 1.5625rem 0.9375rem;
     width: 95%;
-    border-radius: 15px;
-  }
-  
-  h1 {
-    font-size: 2rem;
-    margin-bottom: 15px;
+    border-radius: 0.9375rem;
   }
   
   .invite-details {
-    padding: 15px;
-    font-size: 1rem;
-    margin-top: 20px;
-    border-radius: 10px;
+    padding: 0.9375rem;
+    margin-top: 1.25rem;
+    border-radius: 0.625rem;
   }
   
   #message {
-    font-size: 1.2rem;
-    min-height: 40px;
-    padding: 5px;
+    min-height: 2.5rem;
+    padding: 0.3125rem;
   }
   
   button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    margin: 10px 5px;
-    border-radius: 30px;
+    padding: 0.625rem 1.25rem;
+    margin: 0.625rem 0.3125rem;
+    border-radius: 1.875rem;
     width: 80%;
-    max-width: 200px;
-  }
-  
-  .emoji {
-    font-size: 1.2em;
+    max-width: 12.5rem;
   }
   
   .button-container {
-    min-height: 80px;
-    margin: 15px 0;
-    display: flex;
+    min-height: 5rem;
+    margin: 0.9375rem 0;
     flex-direction: column;
-    align-items: center;
   }
   
   /* Reduce number of sparkles on mobile for better performance */
@@ -232,32 +225,22 @@ button {
 }
 
 /* Tablets and small laptops */
-@media screen and (min-width: 481px) and (max-width: 1024px) {
+@media screen and (min-width: 30.0625em) and (max-width: 64em) { /* 481px to 1024px */
   body {
-    padding: 30px;
+    padding: 1.875rem;
   }
   
   .result-container {
-    padding: 30px;
-    max-width: 600px;
-  }
-  
-  h1 {
-    font-size: 2.5rem;
+    padding: 1.875rem;
+    max-width: 37.5rem; /* 600px */
   }
   
   .invite-details {
-    font-size: 1.1rem;
-    padding: 18px;
-  }
-  
-  #message {
-    font-size: 1.3rem;
+    padding: 1.125rem;
   }
   
   button {
-    padding: 11px 25px;
-    font-size: 1rem;
+    padding: 0.6875rem 1.5625rem;
   }
   
   /* Slightly reduce number of sparkles */
@@ -267,13 +250,13 @@ button {
 }
 
 /* For landscape orientation on mobile */
-@media screen and (max-height: 500px) {
+@media screen and (max-height: 31.25em) { /* 500px */
   body {
-    padding: 15px 10px;
+    padding: 0.9375rem 0.625rem;
   }
   
   .result-container {
-    padding: 20px 15px;
+    padding: 1.25rem 0.9375rem;
     max-height: 85vh;
     overflow-y: auto;
     display: flex;
@@ -281,37 +264,72 @@ button {
   }
   
   h1 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
   }
   
   .invite-details {
-    padding: 10px;
-    font-size: 0.9rem;
-    margin-top: 15px;
+    padding: 0.625rem;
+    margin-top: 0.9375rem;
   }
   
   #message {
-    font-size: 1.1rem;
-    min-height: 30px;
-    margin-top: 10px;
+    min-height: 1.875rem;
+    margin-top: 0.625rem;
   }
   
   button {
-    padding: 8px 20px;
-    font-size: 0.9rem;
-    margin: 8px 5px;
+    padding: 0.5rem 1.25rem;
+    margin: 0.5rem 0.3125rem;
   }
   
   .button-container {
-    min-height: 60px;
-    margin: 10px 0;
+    min-height: 3.75rem;
+    margin: 0.625rem 0;
     flex-direction: row;
-    justify-content: center;
+  }
+}
+
+/* High zoom levels */
+@media screen and (max-width: 25em) { /* 400px - for high zoom levels */
+  .result-container {
+    padding: 1.25rem 0.625rem;
+    width: 98%;
   }
   
-  .emoji {
-    font-size: 1.1em;
+  button {
+    width: 90%;
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
+  }
+  
+  .invite-details {
+    padding: 0.75rem;
+  }
+}
+
+/* Very high zoom levels */
+@media screen and (max-width: 18.75em) { /* 300px - for very high zoom levels */
+  body {
+    padding: 0.625rem 0.3125rem;
+  }
+  
+  .result-container {
+    padding: 0.9375rem 0.5rem;
+  }
+  
+  h1 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .invite-details {
+    padding: 0.5rem;
+    margin-top: 0.625rem;
+    border-left-width: 0.125rem;
+  }
+  
+  button {
+    padding: 0.375rem 0.75rem;
+    margin: 0.375rem 0;
   }
 }
 
@@ -321,4 +339,3 @@ button {
     background: rgba(40, 10, 60, 0.8);
   }
 }
-

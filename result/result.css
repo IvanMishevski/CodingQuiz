@@ -174,3 +174,151 @@ button {
       opacity: 0.7;
   }
 }
+/* Mobile devices (portrait) */
+@media screen and (max-width: 480px) {
+  body {
+    padding: 20px 10px;
+  }
+  
+  .result-container {
+    padding: 25px 15px;
+    width: 95%;
+    border-radius: 15px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .invite-details {
+    padding: 15px;
+    font-size: 1rem;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+  
+  #message {
+    font-size: 1.2rem;
+    min-height: 40px;
+    padding: 5px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin: 10px 5px;
+    border-radius: 30px;
+    width: 80%;
+    max-width: 200px;
+  }
+  
+  .emoji {
+    font-size: 1.2em;
+  }
+  
+  .button-container {
+    min-height: 80px;
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Reduce number of sparkles on mobile for better performance */
+  .sparkle:nth-child(n+10) {
+    display: none;
+  }
+}
+
+/* Tablets and small laptops */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  body {
+    padding: 30px;
+  }
+  
+  .result-container {
+    padding: 30px;
+    max-width: 600px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  .invite-details {
+    font-size: 1.1rem;
+    padding: 18px;
+  }
+  
+  #message {
+    font-size: 1.3rem;
+  }
+  
+  button {
+    padding: 11px 25px;
+    font-size: 1rem;
+  }
+  
+  /* Slightly reduce number of sparkles */
+  .sparkle:nth-child(n+15) {
+    display: none;
+  }
+}
+
+/* For landscape orientation on mobile */
+@media screen and (max-height: 500px) {
+  body {
+    padding: 15px 10px;
+  }
+  
+  .result-container {
+    padding: 20px 15px;
+    max-height: 85vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .invite-details {
+    padding: 10px;
+    font-size: 0.9rem;
+    margin-top: 15px;
+  }
+  
+  #message {
+    font-size: 1.1rem;
+    min-height: 30px;
+    margin-top: 10px;
+  }
+  
+  button {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    margin: 8px 5px;
+  }
+  
+  .button-container {
+    min-height: 60px;
+    margin: 10px 0;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .emoji {
+    font-size: 1.1em;
+  }
+}
+
+/* Ensure backdrop-filter fallback for browsers that don't support it */
+@supports not (backdrop-filter: blur(10px)) {
+  .result-container {
+    background: rgba(40, 10, 60, 0.8);
+  }
+}
+

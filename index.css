@@ -99,3 +99,94 @@ p {
   background-color: #00ff88;
   color: #111;
 }
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 20px;
+    border-width: 5px;
+    border-radius: 25px;
+    width: 85%;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+  }
+  
+  .matrix-column {
+    font-size: 1rem;
+  }
+}
+
+/* Tablets and small laptops */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .container {
+    padding: 30px;
+    border-width: 8px;
+    width: 80%;
+  }
+  
+  h1 {
+    font-size: 2.2rem;
+  }
+  
+  .container::before,
+  .container::after {
+    display: block;
+    width: 30px;
+    height: 80px;
+  }
+  
+  .container::before {
+    left: -50px;
+  }
+  
+  .container::after {
+    right: -50px;
+  }
+}
+
+/* Larger laptops and desktops */
+@media screen and (min-width: 1025px) {
+  .container {
+    padding: 40px;
+    max-width: 800px;
+  }
+  
+  .container::before,
+  .container::after {
+    display: block;
+  }
+  
+  .btn {
+    display: inline-block;
+  }
+}
+
+/* For landscape orientation on mobile */
+@media screen and (max-height: 500px) {
+  .container {
+    padding: 15px;
+    border-width: 5px;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+}

@@ -19,7 +19,7 @@ function next(question) {
     const quizContainer = document.querySelector('.quiz-container');
     quizContainer.innerHTML = `
       <div class="success-message">
-        <h2>Checking answears!</h2>
+        <h2>Checking answers!</h2>
         <p>Great job! Redirecting to results...</p>
         <div class="loader"></div>
       </div>

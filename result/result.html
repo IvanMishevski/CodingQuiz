@@ -1,32 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
-  <meta charset="UTF-8">
-  <title>You're Invited!</title>
-  <link rel="stylesheet" href="result.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Абитуриентски Бал 2025</title>
+    <link rel="stylesheet" href="result.css">
 </head>
 <body>
-  <div class="sparkles" id="sparkles"></div>
-  
-  <div class="result-container">
-    <h1>Ще дойдете ли с нас на бала?</h1>
-
-    <div class="button-container">
-      <button id="trueBtn" onclick="sayYes()">true <span class="emoji">✨</span></button>
-      <button id="falseBtn">false <span class="emoji">🙁</span></button>
-    </div>
+    <!-- Side ornaments containers -->
+    <div class="left-ornaments"></div>
+    <div class="right-ornaments"></div>
+    <div class="background-ornaments"></div>
     
-    <div id="message"></div>
-    
-    <div class="invite-details">
-      <p><span class="emoji">🎉</span> Дата: <strong>25 май, 2025</strong></p>
-      <p><span class="emoji">📍</span> Място: <strong>Хотел Санкт Петербург,Пловдив</strong></p>
-      <p><span class="emoji">🕖</span> Час: <strong>17:00</strong></p>
+    <div class="invitation-card">
+        <div class="border-frame"></div>
+        
+        <div class="balloons">
+            <div class="balloon gold"></div>
+            <div class="balloon dark"></div>
+            <div class="balloon gold"></div>
+            <div class="balloon dark"></div>
+            <div class="balloon gold"></div>
+            <div class="balloon dark"></div>
+        </div>
+        
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        
+        <!-- Corner decorations -->
+        <div class="corner-decoration top-left"></div>
+        <div class="corner-decoration top-right"></div>
+        <div class="corner-decoration bottom-left"></div>
+        <div class="corner-decoration bottom-right"></div>
+        
+        <div class="card-content">
+            <div>
+                <h3 class="invite-header">ОФИЦИАЛНО ВИ КАНИМ НА</h3>
+                <h1 class="event-name">БАЛА НА 12Д </h1>
+                <div class="year">2025</div>
+                <p class="time-date">
+                    25 май, 2025 • 17:00 ч.
+                </p>
+                <p class="location">
+                    Град Пловдив • Хотел "Санкт Петербург"
+                </p>
+                <p class="gold-text">Ще дойдете ли с нас на бала?</p>
+            </div>
+            <div class="options-container">
+                <button class="option-btn true-option">Да, с удоволствие!</button>
+                <button class="option-btn false-option">Не, благодаря</button>
+            </div>
+        </div>
     </div>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-  <script src="result.js"></script>
+    <script src="result.js"></script>
 </body>
 </html>

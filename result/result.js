@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Create a confirmation message element
                 const confirmationMessage = document.createElement('div');
                 confirmationMessage.className = 'confirmation-message';
-                confirmationMessage.innerHTML = "🎉 Супер,ще ви чакаме!Няма връщане назад, да знаете! 🎉";
+                confirmationMessage.innerHTML = "🎉 Супер,ще Ви чакаме! Няма връщане назад, да знаете! 🎉";
 
                 // Insert the message after the options container
                 const optionsContainer = document.querySelector('.options-container');

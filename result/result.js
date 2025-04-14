@@ -75,10 +75,19 @@ document.addEventListener('DOMContentLoaded', function () {
             falseClone.addEventListener('mouseover', function(e) {
                 moveButtonToSafePosition(this);
             });
+            
             falseClone.addEventListener('touchstart', function(e) {
                 moveButtonToSafePosition(this);
                 // Prevent default to avoid triggering click events
                 e.preventDefault();
+            });
+            
+            // IMPORTANT: Prevent click events on the clone from triggering confetti
+            falseClone.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                moveButtonToSafePosition(this);
+                return false;
             });
             
             // Move the button immediately on first touch/hover

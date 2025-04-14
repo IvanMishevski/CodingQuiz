@@ -45,20 +45,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (falseOption) {
-        // Handle both mouse and touch events
-        falseOption.addEventListener('mouseover', handleFalseButtonEvasion);
-        falseOption.addEventListener('touchstart', handleFalseButtonEvasion);
-        
-        function handleFalseButtonEvasion(e) {
+        // Create a clone of the false button for the moving effect
+        // This way the original button stays in place
+        falseOption.addEventListener('mouseover', function (e) {
             // Prevent the event from firing multiple times
             if (this.dataset.cloneCreated) return;
             this.dataset.cloneCreated = 'true';
-    
+
             // Create clone
             const falseClone = this.cloneNode(true);
             falseClone.classList.add('false-option-clone');
             document.body.appendChild(falseClone);
-    
+
             // Position the clone exactly over the original button
             const rect = this.getBoundingClientRect();
             falseClone.style.position = 'fixed';
@@ -67,31 +65,15 @@ document.addEventListener('DOMContentLoaded', function () {
             falseClone.style.top = `${rect.top}px`;
             falseClone.style.width = `${rect.width}px`;
             falseClone.style.height = `${rect.height}px`;
-    
+
             // Completely hide the original button (not just visibility)
             this.style.display = 'none';
-    
-            // Make the clone run away on hover/touch
+
+            // Make the clone run away on hover
+            // Make the clone run away on hover
             falseClone.addEventListener('mouseover', function(e) {
                 moveButtonToSafePosition(this);
             });
-            
-            falseClone.addEventListener('touchstart', function(e) {
-                moveButtonToSafePosition(this);
-                // Prevent default to avoid triggering click events
-                e.preventDefault();
-            });
-            
-            // IMPORTANT: Prevent click events on the clone from triggering confetti
-            falseClone.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                moveButtonToSafePosition(this);
-                return false;
-            });
-            
-            // Move the button immediately on first touch/hover
-            moveButtonToSafePosition(falseClone);
             
             // Also add a periodic check to ensure the false button doesn't overlap the true button
             // This handles cases where the true button moves after the false button has been positioned
@@ -209,7 +191,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     button.style.transition = `left ${speed}s, top ${speed}s`;
                 }
             }
-        }
+
+
+        });
     }
 
     // Function to create side ornaments
